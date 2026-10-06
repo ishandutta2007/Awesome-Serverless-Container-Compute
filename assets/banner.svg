@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 800; font-size: 46px; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; }
+    .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; font-weight: 600; font-size: 14px; fill: #38bdf8; }
+    
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.98); }
+      50% { opacity: 0.7; transform: scale(1.02); }
+      100% { opacity: 0.3; transform: scale(0.98); }
+    }
+    @keyframes float1 {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes float2 {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-3deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: -40; }
+    }
+
+    .bg-circle { animation: pulse 6s infinite ease-in-out; transform-origin: center; }
+    .floating-card-1 { animation: float1 5s infinite ease-in-out; }
+    .floating-card-2 { animation: float2 7s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 8, 8; animation: dash 2s linear infinite; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Background Animated Orbs (Behind Content) -->
+  <circle class="bg-circle" cx="150" cy="80" r="120" fill="#38bdf8" opacity="0.15" filter="blur(40px)"/>
+  <circle class="bg-circle" cx="1050" cy="220" r="140" fill="#c084fc" opacity="0.15" filter="blur(50px)"/>
+
+  <!-- Decorative Network / Container Graphics (Right Side) -->
+  <g transform="translate(780, 40)">
+    <!-- Animated Flow Connection Lines -->
+    <path class="flow-line" d="M 60 70 L 180 70 L 260 140" stroke="#818cf8" stroke-width="2" fill="none" opacity="0.6"/>
+    <path class="flow-line" d="M 60 170 L 180 170 L 260 140" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.6"/>
+
+    <!-- Dynamic Container Node 1 -->
+    <g class="floating-card-1" transform="translate(10, 30)">
+      <rect width="110" height="70" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" opacity="0.9"/>
+      <rect x="15" y="15" width="40" height="8" rx="4" fill="#38bdf8"/>
+      <rect x="15" y="30" width="75" height="6" rx="3" fill="#475569"/>
+      <rect x="15" y="44" width="50" height="6" rx="3" fill="#334155"/>
+      <circle cx="90" cy="19" r="4" fill="#4ade80"/>
+    </g>
+
+    <!-- Dynamic Container Node 2 -->
+    <g class="floating-card-2" transform="translate(10, 130)">
+      <rect width="110" height="70" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" opacity="0.9"/>
+      <rect x="15" y="15" width="40" height="8" rx="4" fill="#818cf8"/>
+      <rect x="15" y="30" width="75" height="6" rx="3" fill="#475569"/>
+      <rect x="15" y="44" width="50" height="6" rx="3" fill="#334155"/>
+      <circle cx="90" cy="19" r="4" fill="#4ade80"/>
+    </g>
+
+    <!-- Scale-to-Zero Cloud Hub -->
+    <g transform="translate(210, 95)">
+      <rect width="120" height="80" rx="12" fill="#0f172a" stroke="url(#accent-grad)" stroke-width="2" filter="url(#glow)"/>
+      <text x="60" y="38" font-family="system-ui" font-weight="700" font-size="13" fill="#ffffff" text-anchor="middle">SCALE TO ZERO</text>
+      <text x="60" y="56" font-family="system-ui" font-weight="600" font-size="11" fill="#38bdf8" text-anchor="middle">⚡ Auto-Scaling</text>
+    </g>
+  </g>
+
+  <!-- Foreground Content (Text & Title) - Always Clear & Readable -->
+  <g transform="translate(70, 0)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 55)">
+      <rect width="250" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1" opacity="0.9"/>
+      <text x="125" y="20" class="badge-text" text-anchor="middle">⚡ AWESOME SERVERLESS COMPUTE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="140" class="title">Awesome Serverless Container Compute 🚀</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="180" class="subtitle">Curated SaaS Platforms, Scale-to-Zero Runtimes &amp; Self-Hosted Open-Source Ecosystems</text>
+
+    <!-- Bottom Feature Tags -->
+    <g transform="translate(0, 215)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e293b" opacity="0.8"/>
+      <text x="65" y="17" font-family="system-ui" font-size="12" font-weight="600" fill="#cbd5e1" text-anchor="middle">📦 Containers</text>
+
+      <!-- Tag 2 -->
+      <rect x="140" y="0" width="130" height="26" rx="6" fill="#1e293b" opacity="0.8"/>
+      <text x="205" y="17" font-family="system-ui" font-size="12" font-weight="600" fill="#cbd5e1" text-anchor="middle">☸️ Kubernetes</text>
+
+      <!-- Tag 3 -->
+      <rect x="280" y="0" width="130" height="26" rx="6" fill="#1e293b" opacity="0.8"/>
+      <text x="345" y="17" font-family="system-ui" font-size="12" font-weight="600" fill="#cbd5e1" text-anchor="middle">🔒 MicroVMs</text>
+
+      <!-- Tag 4 -->
+      <rect x="420" y="0" width="130" height="26" rx="6" fill="#1e293b" opacity="0.8"/>
+      <text x="485" y="17" font-family="system-ui" font-size="12" font-weight="600" fill="#cbd5e1" text-anchor="middle">🌐 Self-Hosted</text>
+    </g>
+  </g>
+</svg>
