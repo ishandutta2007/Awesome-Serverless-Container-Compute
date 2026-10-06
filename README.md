@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Serverless-Container-Compute"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Serverless-Container-Compute?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Serverless-Container-Compute"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Serverless-Container-Compute?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Serverless-Container-Compute/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Serverless-Container-Compute?style=social" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -65,11 +65,11 @@ This curated repository tracks top **commercial serverless container platforms (
 
 ## 📦 Open-Source GitHub Projects
 
-*(Sorted by GitHub Star Count in Descending Order)*
+*(Sorted by GitHub Stars_Count in Descending Order)*
 
 ### 🚀 Top Featured Repositories
 
-| Project 🛠️ | GitHub Star Count ⭐ | License 📄 | Primary Focus & Category 🏷️ |
+| Project 🛠️ | GitHub Stars_Count ⭐ | License 📄 | Primary Focus & Category 🏷️ |
 | :--- | :--- | :--- | :--- |
 | **[Coolify](https://github.com/coollabsio/coolify)** | [<img src="https://img.shields.io/github/stars/coollabsio/coolify?style=social&color=white" alt="Coolify Stars"/>](https://github.com/coollabsio/coolify/stargazers) | Apache-2.0 | Self-Hosted PaaS / Heroku & Vercel Alternative |
 | **[Dokku](https://github.com/dokku/dokku)** | [<img src="https://img.shields.io/github/stars/dokku/dokku?style=social&color=white" alt="Dokku Stars"/>](https://github.com/dokku/dokku/stargazers) | MIT | Minimalist Bash-Powered Docker PaaS |
